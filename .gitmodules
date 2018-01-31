@@ -1,0 +1,90 @@
+[submodule "BinDeps"]
+	path = BinDeps
+	url = ./BinDeps/
+[submodule "Calculus"]
+	path = Calculus
+	url = ./Calculus/
+[submodule "CategoricalArrays"]
+	path = CategoricalArrays
+	url = ./CategoricalArrays/
+[submodule "CodecZlib"]
+	path = CodecZlib
+	url = ./CodecZlib/
+[submodule "Compat"]
+	path = Compat
+	url = ./Compat/
+[submodule "DataArrays"]
+	path = DataArrays
+	url = ./DataArrays/
+[submodule "DataFrames"]
+	path = DataFrames
+	url = ./DataFrames/
+[submodule "DataStreams"]
+	path = DataStreams
+	url = ./DataStreams/
+[submodule "DataStructures"]
+	path = DataStructures
+	url = ./DataStructures/
+[submodule "Distributions"]
+	path = Distributions
+	url = ./Distributions/
+[submodule "Feather"]
+	path = Feather
+	url = ./Feather/
+[submodule "FixedEffectModels"]
+	path = FixedEffectModels
+	url = ./FixedEffectModels/
+[submodule "FlatBuffers"]
+	path = FlatBuffers
+	url = ./FlatBuffers/
+[submodule "GLM"]
+	path = GLM
+	url = ./GLM/
+[submodule "METADATA"]
+	path = METADATA
+	url = ./METADATA/
+[submodule "Missings"]
+	path = Missings
+	url = ./Missings/
+[submodule "NamedTuples"]
+	path = NamedTuples
+	url = ./NamedTuples/
+[submodule "PDMats"]
+	path = PDMats
+	url = ./PDMats/
+[submodule "QuadGK"]
+	path = QuadGK
+	url = ./QuadGK/
+[submodule "Reexport"]
+	path = Reexport
+	url = ./Reexport/
+[submodule "Rmath"]
+	path = Rmath
+	url = ./Rmath/
+[submodule "SHA"]
+	path = SHA
+	url = ./SHA/
+[submodule "SortingAlgorithms"]
+	path = SortingAlgorithms
+	url = ./SortingAlgorithms/
+[submodule "SpecialFunctions"]
+	path = SpecialFunctions
+	url = ./SpecialFunctions/
+[submodule "StatsBase"]
+	path = StatsBase
+	url = ./StatsBase/
+[submodule "StatsFuns"]
+	path = StatsFuns
+	url = ./StatsFuns/
+[submodule "StatsModels"]
+	path = StatsModels
+	url = ./StatsModels/
+[submodule "TranscodingStreams"]
+	path = TranscodingStreams
+	url = ./TranscodingStreams/
+[submodule "URIParser"]
+	path = URIParser
+	url = ./URIParser/
+[submodule "WeakRefStrings"]
+	path = WeakRefStrings
+	url = ./WeakRefStrings/
