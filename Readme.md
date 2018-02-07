@@ -33,28 +33,43 @@ echo "output of Pkg.status(): " >> julia_full_pkgs/Readme.md
 JULIA_PKGDIR=.julia julia -E 'Pkg.status()' --startup-file=no >> julia_full_pkgs/Readme.md
 
 output of Pkg.status(): 
-4 required packages:
+5 required packages:
  - Feather                       0.3.1
  - FixedEffectModels             0.5.0
  - GLM                           0.10.1
+ - JuliaDB                       0.6.0
  - OhMyREPL                      0.2.11
-28 additional packages:
+46 additional packages:
  - BinDeps                       0.8.6
  - Calculus                      0.2.2
  - CategoricalArrays             0.3.3
  - CodecZlib                     0.4.2
  - Compat                        0.52.0
  - Crayons                       0.4.1
+ - Dagger                        0.5.2
  - DataArrays                    0.7.0
  - DataFrames                    0.11.5
  - DataStreams                   0.3.4
  - DataStructures                0.7.4
+ - DataValues                    0.3.1
  - Distributions                 0.15.0
  - FlatBuffers                   0.3.1
+ - Glob                          1.1.1
+ - IndexedTables                 0.5.2
+ - IteratorInterfaceExtensions   0.0.2
+ - LearnBase                     0.1.6
+ - Logging                       0.3.1
+ - LossFunctions                 0.2.0
+ - MemPool                       0.0.6
  - Missings                      0.2.6
  - NamedTuples                   4.0.0
+ - OnlineStats                   0.15.2
+ - OnlineStatsBase               0.5.0
  - PDMats                        0.8.0
+ - PenaltyFunctions              0.0.2
+ - PooledArrays                  0.1.1
  - QuadGK                        0.2.0
+ - RecipesBase                   0.2.3
  - Reexport                      0.1.0
  - Rmath                         0.3.2
  - SHA                           0.5.6
@@ -63,6 +78,10 @@ output of Pkg.status():
  - StatsBase                     0.19.5
  - StatsFuns                     0.5.0
  - StatsModels                   0.2.2
+ - SweepOperator                 0.1.0
+ - TableTraits                   0.1.0
+ - TableTraitsUtils              0.1.3
+ - TextParse                     0.4.0
  - Tokenize                      0.4.2
  - TranscodingStreams            0.4.1
  - URIParser                     0.3.0
