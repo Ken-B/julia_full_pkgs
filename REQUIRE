@@ -3,3 +3,22 @@ GLM
 Feather
 OhMyREPL
 JuliaDB
+CSV
+Plots
+GR
+CodecZlib
+CodecXz
+CodecBzip2
+CodecZstd
+
+# for linux, best install jupyter first on system
+
+#LightGBM #needs cloning manually
+Optim
+BenchmarkTools
+
+StatPlots
+Flux
+IJulia
+MXNet
+Knet
