@@ -1,0 +1,29 @@
+FixedEffectModels
+Feather
+GLM
+OhMyREPL
+RegressionTables
+
+JuliaDB
+CSV
+CodecZlib
+#CodecXz
+CodecBzip2
+# CodecZstd #too big
+
+Plots
+#GR #too large binary
+PyPlot
+Gadfly
+
+# for linux, best install jupyter first on system
+IJulia
+
+#LightGBM #needs cloning manually
+Optim
+BenchmarkTools
+
+StatPlots
+Flux #NNlib doesn't build #let's try v0.5
+# MXNet #some git error
+#Knet
