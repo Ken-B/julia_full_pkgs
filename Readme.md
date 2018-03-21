@@ -24,7 +24,8 @@ do
   #zip -9 -r "${base}.zip" "$dir" -x *.git*
   #--exclude *.git
   echo "$base"
-  tar cJf "${outdir}/${base}.tar.xz" --exclude='.git' --exclude='docs' --exclude='benchmark/.results' --exclude='deps/usr/downloads' "$dir"
+  #possible for CSV to add --exclude='test/test_files'
+  tar cJf "${outdir}/${base}.tar.xz" --exclude='.git' --exclude='docs' --exclude='doc' --exclude='benchmark/.results' --exclude='deps/downloads' --exclude='deps/src' --exclude='deps/builds' "$dir"
 done
 cp _unzipit.sh "${outdir}"
 cp .julia/v0.6/REQUIRE "${outdir}"
@@ -35,65 +36,72 @@ cat _zipit.sh >> "${outdir}/Readme.md"
 echo "output of Pkg.status(): " >> "${outdir}/Readme.md"
 JULIA_PKGDIR=.julia julia -E 'Pkg.status()' --startup-file=no >> "${outdir}/Readme.md"
 output of Pkg.status(): 
-17 required packages:
+23 required packages:
  - BenchmarkTools                0.2.5
- - CSV                           0.1.5
+ - CSV                           0.2.2
+ - CSVFiles                      0.5.1
  - CodecBzip2                    0.4.1
  - CodecZlib                     0.4.2
- - Feather                       0.2.5
- - FixedEffectModels             0.4.0
+ - Feather                       0.3.1
+ - FixedEffectModels             0.5.0
  - Flux                          0.5.1
- - GLM                           0.8.1
- - Gadfly                        0.6.5
+ - GLM                           0.10.1
  - IJulia                        1.7.0
+ - Interact                      0.7.0
+ - JLD2                          0.0.5
  - JuliaDB                       0.7.2
+ - Knet                          0.9.0
  - OhMyREPL                      0.2.11
  - Optim                         0.14.0
  - Plots                         0.15.0
  - PyPlot                        2.5.0
- - RegressionTables              0.0.2
- - StatPlots                     0.7.1
-101 additional packages:
+ - Query                         0.9.1
+ - RegressionTables              0.1.0
+ - Revise                        0.1.1
+ - StatPlots                     0.7.2
+ - XGBoost                       0.2.0
+105 additional packages:
  - AbstractTrees                 0.1.0
  - Adapt                         0.2.0
+ - AutoGrad                      0.0.10
  - AxisAlgorithms                0.2.0
  - BinDeps                       0.8.7
  - BinaryProvider                0.2.5
+ - BufferedStreams               0.4.0
  - Calculus                      0.2.2
- - CategoricalArrays             0.1.6
+ - CategoricalArrays             0.3.6
  - ColorTypes                    0.6.7
  - Colors                        0.8.2
  - CommonSubexpressions          0.0.1
- - Compat                        0.60.0
- - Compose                       0.5.5
+ - Compat                        0.62.0
  - Conda                         0.7.1
  - Contour                       0.4.0
- - CoupledFields                 0.0.1
  - Crayons                       0.4.1
  - Dagger                        0.5.2
- - DataArrays                    0.6.2
+ - DataArrays                    0.7.0
  - DataFlow                      0.3.1
- - DataFrames                    0.10.1
- - DataStreams                   0.1.3
+ - DataFrames                    0.11.5
+ - DataStreams                   0.3.4
  - DataStructures                0.7.4
  - DataValues                    0.3.3
  - DiffEqDiffTools               0.4.0
  - DiffResults                   0.0.3
  - DiffRules                     0.0.3
- - Distances                     0.5.0
  - Distributions                 0.15.0
+ - DocStringExtensions           0.4.3
+ - Documenter                    0.15.0
  - DualNumbers                   0.3.0
  - FileIO                        0.7.0
  - FixedPointNumbers             0.4.6
- - FlatBuffers                   0.2.0
+ - FlatBuffers                   0.3.2
  - Formatting                    0.3.0
  - ForwardDiff                   0.7.3
  - GZip                          0.3.0
  - Glob                          1.1.1
- - Hexagons                      0.1.0
+ - HTTP                          0.6.7
  - IndexedTables                 0.6.0
+ - IniFile                       0.4.0
  - Interpolations                0.7.3
- - IterTools                     0.2.1
  - IterableTables                0.7.1
  - IteratorInterfaceExtensions   0.0.2
  - JSON                          0.17.1
@@ -102,8 +110,9 @@ output of Pkg.status():
  - LaTeXStrings                  0.3.0
  - Lazy                          0.12.0
  - LearnBase                     0.1.6
+ - Libz                          0.2.4
+ - LightGBM                      0.0.0-             master (unregistered)
  - LineSearches                  3.2.5
- - Loess                         0.3.0
  - Logging                       0.3.1
  - LossFunctions                 0.2.0
  - MacroTools                    0.4.0
@@ -116,7 +125,6 @@ output of Pkg.status():
  - NNlib                         0.3.0
  - NaNMath                       0.3.1
  - NamedTuples                   4.0.0
- - NullableArrays                0.1.2
  - Nullables                     0.0.4
  - OnlineStats                   0.16.0
  - OnlineStatsBase               0.6.1
@@ -128,10 +136,12 @@ output of Pkg.status():
  - PooledArrays                  0.1.1
  - PositiveFactorizations        0.1.0
  - PyCall                        1.15.0
- - QuadGK                        0.2.0
- - RData                         0.2.0
- - RDatasets                     0.2.0
+ - QuadGK                        0.2.1
+ - QueryOperators                0.2.1
+ - RData                         0.3.0
+ - RDatasets                     0.3.0
  - Ratios                        0.2.0
+ - Reactive                      0.6.0
  - RecipesBase                   0.2.3
  - Reexport                      0.1.0
  - Requires                      0.4.3
@@ -144,6 +154,7 @@ output of Pkg.status():
  - StaticArrays                  0.7.0
  - StatsBase                     0.20.1
  - StatsFuns                     0.5.0
+ - StatsModels                   0.2.2
  - SweepOperator                 0.1.0
  - TableTraits                   0.2.0
  - TableTraitsUtils              0.1.3
@@ -151,7 +162,7 @@ output of Pkg.status():
  - Tokenize                      0.4.2
  - TranscodingStreams            0.5.1
  - URIParser                     0.3.1
- - WeakRefStrings                0.2.0
+ - WeakRefStrings                0.4.3
  - WoodburyMatrices              0.2.2
  - ZMQ                           0.5.1
  - ZipFile                       0.5.0

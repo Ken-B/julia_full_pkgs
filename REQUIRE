@@ -3,18 +3,24 @@ Feather
 GLM
 OhMyREPL
 RegressionTables
+Revise
 
 JuliaDB
 CSV
+CSVFiles
+Query
 CodecZlib
 #CodecXz
 CodecBzip2
 # CodecZstd #too big
+JLD2
 
 Plots
 #GR #too large binary
 PyPlot
-Gadfly
+# Gadfly #Not compatible with latest DataFrames
+StatPlots
+Interact
 
 # for linux, best install jupyter first on system
 IJulia
@@ -23,7 +29,8 @@ IJulia
 Optim
 BenchmarkTools
 
-StatPlots
+
 Flux #NNlib doesn't build #let's try v0.5
 # MXNet #some git error
-#Knet
+Knet
+XGBoost
